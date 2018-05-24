@@ -15,6 +15,9 @@
 
 const Route = use('Route')
 
-Route.get('/', ({ request }) => {
-  return { greeting: 'Hello world in JSON' }
+// Registration
+
+Route.group(()=>{
+  Route.post('auth/register', 'UserController.register')
 })
+  .prefix('api/v0')
