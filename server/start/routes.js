@@ -20,5 +20,9 @@ const Route = use('Route')
 Route.group(()=>{
   Route.post('auth/register', 'UserController.register')
   Route.post('auth/login', 'UserController.login')
+
+
+  Route.post('projects', 'ProjectController.create').middleware('auth')
+  Route.get('projects', 'ProjectController.index').middleware('auth')
 })
   .prefix('api/v0')
