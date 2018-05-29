@@ -3,7 +3,7 @@
 const Model = use('Model')
 
 class Project extends Model {
-    usera(){
+    user(){
         return this.belongsTo('App/Models/User')
     }
 
