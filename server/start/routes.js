@@ -34,4 +34,4 @@ Route.group(()=>{
   Route.patch('tasks/:id', 'TaskController.update').middleware('auth')
 
 })
-  .prefix('api/v0')
+  .prefix('api')

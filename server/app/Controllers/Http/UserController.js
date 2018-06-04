@@ -18,6 +18,8 @@ class UserController {
             email,
             password,
             username: email
+        }).catch((err) => {
+            console.log('Err:', err);
         })
         return this.login(...arguments)
     }
